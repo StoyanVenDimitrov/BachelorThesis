@@ -1,0 +1,90 @@
+body {
+    background: #67688A;
+    font-family: 'Open Sans',Arial,Helvetica;
+}
+
+#header {
+    font-size: 32pt
+}
+
+#experiments {
+    width: 20%;
+    float:left
+}
+
+#main_panel {
+    width: 80%;
+    float: right;
+}
+
+#contentBox {
+    margin: 5px;
+    margin-top: 10px;
+    background: #bbb;
+    padding: 5px;
+    font-size: 10pt
+}
+
+#content {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+
+#file_panel {
+    text-align: center;
+    padding: 5px
+}
+
+.exp_item {
+    text-align: center;
+    background: #FFFFCC;
+    margin: 5px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.exp_item:hover {
+    background: #FFFF33;
+}
+
+.exp_item_selected {
+    background: #990000;
+    font-weight: bold;
+    cursor: default;
+}
+
+.exp_item_selected:hover {
+    background: #990000;
+}
+
+
+.noexp {
+    margin-top: 50px;
+    color: red;
+    font-weight: bold;
+}
+
+.topButton {
+    background: #990000;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border: 3px #222 solid;
+    border-radius: 3px;
+    width: 200px;
+    user-select: none;
+}
+
+.topButton:hover {
+    background: #CC0000;
+}
+
+.topButton_selected {
+    font-weight: bold;
+    border: 5px black solid;
+}
+
+#refresh {
+    font-weight: bolder;
+}

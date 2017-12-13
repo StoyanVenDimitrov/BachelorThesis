@@ -1,0 +1,68 @@
+[33m2017-12-13 13:40:46[0m: Building model based on the config.
+[33m2017-12-13 13:40:47[0m: Vocabulary from BPE merges loaded. Size: 30142 subwords
+[33m2017-12-13 13:40:47[0m: Sample of the vocabulary: ['openha@@', 'tiefer@@', 'breeding', 'japanese', 'verbund']
+[33m2017-12-13 13:40:48[0m: Hidden features: Tensor("attention_sentence_encoder/Conv2D:0", shape=(?, ?, 1, 2048), dtype=float32)
+[33m2017-12-13 13:40:48[0m: Attention mask: Tensor("encoder_input/sequence_mask:0", shape=(?, ?), dtype=float32)
+[33m2017-12-13 13:40:48[0m: Initializing decoder, name: 'decoder'
+[33m2017-12-13 13:40:48[0m: Using linear projection of encoders as the initial state
+[33m2017-12-13 13:40:48[0m: No output projection specified - using tanh projection
+[33m2017-12-13 13:40:48[0m: The inferred rnn_size of this encoder projection will be 2048
+[33m2017-12-13 13:40:49[0m: Decoder initalized. Cost var: Tensor("decoder/Mean:0", shape=(), dtype=float32)
+[33m2017-12-13 13:40:49[0m: Runtime logits tensor: Tensor("decoder/TensorArrayStack_6/TensorArrayGatherV3:0", shape=(?, ?, 30142), dtype=float32)
+[33m2017-12-13 13:40:49[0m: Initializing BPE preprocessor
+[33m2017-12-13 13:40:49[0m: Initializing dataset with: source, target
+[33m2017-12-13 13:41:12[0m: Initializing dataset with: source, target
+[33m2017-12-13 13:41:15[0m: Dataset length: 2999
+[33m2017-12-13 13:41:31[0m: Model built.
+[33m2017-12-13 13:41:31[0m: Coder: <neuralmonkey.attention.feed_forward.Attention object at 0x7fcb951cbf28> has neither an input sequence attribute nor a a data attribute.
+[33m2017-12-13 13:41:31[0m: Coder: <neuralmonkey.attention.feed_forward.Attention object at 0x7fcb951cbf28> has neither an input sequence attribute nor a a data attribute.
+[32m================================================================================[0m
+[32mTRANSLATION[0m
+[32m================================================================================[0m
+Launched at 2017-12-13 13:41:31
+Experiment directory: test
+
+[33m2017-12-13 13:41:31[0m: The model has 31 trainable variables:
+
+[1m[33m                                 Variable name                                         Shape           Size   
+[0m
+encoder_input/embedding_matrix_0:0                                              [30142, 500]          15071000
+encoder/bidirectional_rnn/fw/OrthoGRUCell/gates/kernel:0                        [1524, 2048]           3121152
+encoder/bidirectional_rnn/fw/OrthoGRUCell/gates/bias:0                          [2048]                    2048
+encoder/bidirectional_rnn/fw/OrthoGRUCell/candidate/kernel:0                    [1524, 1024]           1560576
+encoder/bidirectional_rnn/fw/OrthoGRUCell/candidate/bias:0                      [1024]                    1024
+encoder/bidirectional_rnn/bw/OrthoGRUCell/gates/kernel:0                        [1524, 2048]           3121152
+encoder/bidirectional_rnn/bw/OrthoGRUCell/gates/bias:0                          [2048]                    2048
+encoder/bidirectional_rnn/bw/OrthoGRUCell/candidate/kernel:0                    [1524, 1024]           1560576
+encoder/bidirectional_rnn/bw/OrthoGRUCell/candidate/bias:0                      [1024]                    1024
+attention_sentence_encoder/attn_key_projection:0                                [2048, 2048]           4194304
+decoder/initial_state/encoders_projection/kernel:0                              [2048, 1024]           2097152
+decoder/initial_state/encoders_projection/bias:0                                [1024]                    1024
+decoder/word_embeddings:0                                                       [30142, 500]          15071000
+decoder/attention_decoder/dense/kernel:0                                        [2548, 500]            1274000
+decoder/attention_decoder/dense/bias:0                                          [500]                      500
+decoder/attention_decoder/OrthoGRUCell/gates/kernel:0                           [1524, 2048]           3121152
+decoder/attention_decoder/OrthoGRUCell/gates/bias:0                             [2048]                    2048
+decoder/attention_decoder/OrthoGRUCell/candidate/kernel:0                       [1524, 1024]           1560576
+decoder/attention_decoder/OrthoGRUCell/candidate/bias:0                         [1024]                    1024
+attention_sentence_encoder/Attention/attn_query_projection:0                    [1024, 2048]           2097152
+attention_sentence_encoder/attn_projection_bias:0                               [2048]                    2048
+attention_sentence_encoder/attn_similarity_v:0                                  [2048]                    2048
+attention_sentence_encoder/attn_bias:0                                          []                           1
+decoder/attention_decoder/cond_gru_2_cell/gates/kernel:0                        [3072, 2048]           6291456
+decoder/attention_decoder/cond_gru_2_cell/gates/bias:0                          [2048]                    2048
+decoder/attention_decoder/cond_gru_2_cell/candidate/kernel:0                    [3072, 1024]           3145728
+decoder/attention_decoder/cond_gru_2_cell/candidate/bias:0                      [1024]                    1024
+decoder/attention_decoder/dense_1/kernel:0                                      [3572, 1024]           3657728
+decoder/attention_decoder/dense_1/bias:0                                        [1024]                    1024
+decoder/state_to_word_W:0                                                       [1024, 30142]         30865408
+decoder/state_to_word_b:0                                                       [30142]                  30142
+
+[33m2017-12-13 13:41:31[0m: Total number of all parameters: 97859187
+[33m2017-12-13 13:41:31[0m: Loading variables from /home/students/dimitrov/neuralmonkey/lt-exp-30k/lt-ep-bl/variables.data
+[33m2017-12-13 13:41:34[0m: Initializing TensorBoard summary writer.
+[33m2017-12-13 13:41:41[0m: TensorBoard writer initialized.
+[33m2017-12-13 13:41:41[0m: Starting training
+
+[31m2017-12-13 13:41:41[0m: Epoch 1 starts
+[33m2017-12-13 13:43:24[0m: [ExecutionResult(outputs=[[]], losses=[-0.18985277414321899, 10439313.0, 4458573.5], scalar_summaries=None, histogram_summaries=None, image_summaries=None)]
